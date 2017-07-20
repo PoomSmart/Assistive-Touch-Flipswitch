@@ -9,13 +9,11 @@ extern "C" void _AXSAssistiveTouchSetEnabled(BOOL enabled);
 
 @implementation ASToggleSwitch
 
-- (FSSwitchState)stateForSwitchIdentifier:(NSString *)switchIdentifier
-{
+- (FSSwitchState)stateForSwitchIdentifier:(NSString *)switchIdentifier {
 	return _AXSAssistiveTouchEnabled() ? FSSwitchStateOn : FSSwitchStateOff;
 }
 
-- (void)applyState:(FSSwitchState)newState forSwitchIdentifier:(NSString *)switchIdentifier
-{
+- (void)applyState:(FSSwitchState)newState forSwitchIdentifier:(NSString *)switchIdentifier {
 	if (newState == FSSwitchStateIndeterminate)
 		return;
 	_AXSAssistiveTouchSetEnabled(newState == FSSwitchStateOn);
