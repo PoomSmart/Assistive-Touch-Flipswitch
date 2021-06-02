@@ -1,9 +1,12 @@
-Package: org.thebigboss.astoggle
+Package: com.ps.assistivetouchflipswitch
 Name: Assistive Touch Flipswitch
 Depends: mobilesubstrate, com.a3tweaks.flipswitch
-Version: 0.0.1
+Provides: org.thebigboss.astoggle
+Replaces: org.thebigboss.astoggle
+Conflicts: org.thebigboss.astoggle
+Version: 1.0.0
 Architecture: iphoneos-arm
-Description: Enable/Disable Assistive Touch using toggle.
+Description: Flipswitch toggle for Assistive Touch.
 Maintainer: PoomSmart
 Author: PoomSmart
 Section: Addons (Flipswitch)
