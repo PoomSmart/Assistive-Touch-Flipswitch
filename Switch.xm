@@ -21,7 +21,7 @@ extern "C" void _AXSAssistiveTouchSetEnabled(BOOL enabled);
 
 - (void)applyAlternateActionForSwitchIdentifier:(NSString *)switchIdentifier
 {
-	NSURL *url = [NSURL URLWithString:(kCFCoreFoundationVersionNumber > 1665.0f ? @"prefs:root=ACCESSIBILITY&path=TOUCH_REACHABILITY_TITLE/AIR_TOUCH_TITLE#EnableAssistiveTouchSpecifier" : @"prefs:root=General&path=ACCESSIBILITY/AIR_TOUCH_TITLE#AIR_TOUCH_TITLE")];
+	NSURL *url = [NSURL URLWithString:(kCFCoreFoundationVersionNumber >= 1665.0f ? @"prefs:root=ACCESSIBILITY&path=TOUCH_REACHABILITY_TITLE/AIR_TOUCH_TITLE#EnableAssistiveTouchSpecifier" : @"prefs:root=General&path=ACCESSIBILITY/AIR_TOUCH_TITLE#AIR_TOUCH_TITLE")];
 	[[FSSwitchPanel sharedPanel] openURLAsAlternateAction:url];
 }
 
